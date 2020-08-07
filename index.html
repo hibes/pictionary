@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <button id="new-word">Presiona el Botón para una Palabra Nueva</button>
+    <h1 id="word-to-draw"></h1>
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="hard.wordlist.js"></script>
+    <script type="text/javascript">
+      const nextInt = (max, min=0) => Math.floor((Math.random() * max));
+
+      $('#new-word').click(() => {
+        $('#word-to-draw').text(hardWordList[nextInt(hardWordList.length - 1)]);
+      });
+    </script>
+  </body>
+</html>
